@@ -498,6 +498,7 @@ export class Group extends Shape {
         this.children.splice(index, 1);
       }
       this.children.push(child);
+      replaceParent(child, this);
     }
 
     return this;
@@ -540,6 +541,7 @@ export class Group extends Shape {
       const index = this.children.indexOf(object);
       if (index >= 0) {
         this.children.splice(index, 1);
+        replaceParent(object);
       }
     }
 
