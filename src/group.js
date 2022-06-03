@@ -535,9 +535,9 @@ export class Group extends Shape {
     // Remove the objects
     for (let i = 0; i < objects.length; i++) {
       const object = objects[i];
-      if (!object || !this.children.ids[object.id]) {
-        continue;
-      }
+//       if (!object || !this.children.ids[object.id]) {
+//         continue;
+//       }
       const index = this.children.indexOf(object);
       if (index >= 0) {
         this.children.splice(index, 1);
